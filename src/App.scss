@@ -177,3 +177,56 @@ $Very-dark-violet: hsl(278, 68%, 11%);
 .nothanks1{
   visibility: hidden;
 }
+
+
+@media (min-width:90rem){
+  body{
+    background: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 30% auto;
+  }
+  .int-card{
+    position: relative;
+    .int-card-bg{
+      background: none;
+      position: relative;
+      img{
+        width: 27.94rem;
+        height: 15.31rem;
+        position: absolute;
+        left: 16.12rem;
+        top: 29.31rem;
+      }
+      strong{
+        position: absolute;
+        top: 36.1rem;
+        left: 39rem;
+      }
+    }
+
+    .int-card-user{
+      width: 27.94rem;
+      height: 15.31rem;
+      background-size: 27.94rem 15.31rem;
+      position: absolute;
+      top: 11.69rem;
+      left: 10.25rem;
+    }
+
+    .int-card-form{
+      width: 23.81rem;
+      height: 21.81rem;
+      position: absolute;
+      top: 12.37rem;
+      left: 50rem;
+    }
+
+    .thankYou{
+      width: 23.81rem;
+      height: 21.81rem;
+      position: absolute;
+      top: 12.37rem;
+      left: 50rem;
+    }
+  }
+}

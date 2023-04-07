@@ -33,14 +33,15 @@ function App() {
    const handleSubmit = (e)=>{
     e.preventDefault();
     setDataError(userDataValidation(cardData));
+    
     if(Object.keys(dataError).length === 0){
-      setCardDispData(cardData);
+      setIsSubmit(true);
     }
-    setIsSubmit(true);
   };
 
   useEffect(()=>{
     if(Object.keys(dataError).length === 0 && isSubmit){
+      setCardDispData(cardData);
     }
   },[cardData, dataError, isSubmit]);
 

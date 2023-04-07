@@ -22,3 +22,9 @@ body{
   display: flex;
   justify-content: center;
 }
+
+@media (min-width:90rem){
+  body{
+    justify-content: flex-start;
+  }
+}
