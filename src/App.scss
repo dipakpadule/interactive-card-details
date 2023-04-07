@@ -132,7 +132,9 @@ $Very-dark-violet: hsl(278, 68%, 11%);
     align-items: center;
     position: absolute;
     top: 15rem;
-    left: 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
     img{
       margin-bottom: 2.62rem;
     }
