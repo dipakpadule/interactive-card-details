@@ -85,12 +85,12 @@ $Very-dark-violet: hsl(278, 68%, 11%);
         border: 1px solid $Light-grayish-violet;
         margin-top: 0.69rem;
         margin-bottom: 1.37rem;
-        
       }
       ::placeholder{
         font-size: $Fontsize;
         padding-left: 0.7rem;
       }
+      
       .usercard{
         display: flex;
         flex-direction: row;
@@ -154,4 +154,9 @@ $Very-dark-violet: hsl(278, 68%, 11%);
       letter-spacing: 1px;
     }
   }
+}
+.error{
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  color: $Red-input-errors;
 }
