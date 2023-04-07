@@ -130,7 +130,9 @@ $Very-dark-violet: hsl(278, 68%, 11%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    // display: none;
+    position: absolute;
+    top: 15rem;
+    left: 2rem;
     img{
       margin-bottom: 2.62rem;
     }
@@ -159,4 +161,17 @@ $Very-dark-violet: hsl(278, 68%, 11%);
   margin-top: -1.5rem;
   margin-bottom: 1rem;
   color: $Red-input-errors;
+}
+
+.thankyou{
+  visibility: hidden;
+}
+.nothanks{
+  visibility: visible;
+}
+.thankyou1{
+  visibility: visible;
+}
+.nothanks1{
+  visibility: hidden;
 }

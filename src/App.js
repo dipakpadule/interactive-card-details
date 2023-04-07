@@ -18,22 +18,25 @@ function App() {
   const [year, setYear] = useState('23');
   const [cvc, setCVC] = useState('000');
 
+  //
+  const onContinue = ()=>{
+    setIsSubmit(false);
+  };
+
   //handling user entered data
   const handleUserData = (e)=>{
     const {name, value} = e.target;
     setCardData({...cardData, [name]:value});
-    console.log(cardData);
   };
 
    //form data submission
    const handleSubmit = (e)=>{
     e.preventDefault();
     setDataError(userDataValidation(cardData));
-    setIsSubmit(true);
-
-    if(Object.keys(dataError).length === 0 && isSubmit){
+    if(Object.keys(dataError).length === 0){
       setCardDispData(cardData);
     }
+    setIsSubmit(true);
   };
 
   useEffect(()=>{
@@ -98,7 +101,7 @@ function App() {
         </div>
       </section>
 
-      <section className='int-card-form'>
+      <section className={isSubmit ? 'int-card-form thankyou' : 'int-card-form thankyou1'}>
         <form className='form' onSubmit={handleSubmit}>
           <label htmlFor='fullname'>Cardholder Name</label>
           <input type='text' id='fullname' name='fullname' placeholder='e.g. Jane Appleseed' onChange={handleUserData}></input>
@@ -127,11 +130,11 @@ function App() {
         </form>
       </section>
 
-      <section className='thankYou'>
+      <section className={isSubmit ? 'thankYou nothanks': 'thankYou nothanks1'}>
           <img src={thanks} alt='thanks'/>
           <h1>Thank you!</h1>
           <p>We've added your card details</p>
-          <button>Continue</button>
+          <button onClick={onContinue}>Continue</button>
       </section>
    </section>
   );
